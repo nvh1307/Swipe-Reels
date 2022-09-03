@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #563C9B;
+}
+
+.container{
+    background: #111112;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 30px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    position: relative;
+    height: 600px;
+}
+
+.container .content{
+    z-index: 999;
+    position: relative;
+    color: #fff;
+}
+.container .content .tabs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .content .tabs .tab{
+    font-size: 1.1em;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .content .tabs .tab.active{
+    font-weight: 500;
+}
+
+.container .content .tabs .tab#following{
+    position: relative;
+}
+
+.container .content .tabs .tab#following::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 10px;
+    height: 10px;
+    background: #FF0544;
+    border-radius: 50%;
+
+}
+
+.container .content .tabs .tab#following::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 2px;
+    height: 25px;
+    background: #bfbfbf;
+    
+    
+}
+
+.container .content .video-block{
+    margin: 50px 0;
+}
+.container .content .video-lab video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.container .content .right-controls{
+    position: absolute;
+    right: 0px;
+    top: 82px;
+}
+.container .content .right-controls .avatar-user .img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.container .content .right-controls .avatar-user .img{
+    position: relative;
+    right: 6px;
+    top: 10px;
+    cursor: pointer;
+    /* border: 1px solid #fff; */
+}
+
+.container .content .right-controls .avatar-user .img::before{
+    content: "+";
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    background: #FF0544;
+    border-radius: 50%;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 18px;
+}
+
+.container .content .right-controls i{
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    
+}
+
+.container .content .account{
+    width: 113%;
+    margin-left: -29px;
+    background: #161718;
+    position: absolute;
+    top: 400px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.container .content .account .name-account span{
+    color: #24eff2;
+}
+
+.container .content .btn-tab {
+    position: relative;
+    top: 450px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+}
+.container .content .btn-tab .btn-tab-bottom{
+    position: absolute;
+    top: 10px;
+    width: 450px;
+    display: flex;  
+    justify-content: space-between;
+    
+}
+.container .content .btn-tab .btn-tab-bottom i{
+    cursor: pointer;
+    font-size: 25px;
+}
